@@ -15,13 +15,13 @@ public class Group_anagrams {
             Arrays.sort(c);
             String key = String.valueOf(c);
             //Option 1
-//            if(!answer.containsKey(key)) answer.put(key, new ArrayList());
-//            answer.get(key).add(s);
+            if(!answer.containsKey(key)) answer.put(key, new ArrayList());
+            answer.get(key).add(s);
 
             //Option 2
-          List<String> val = answer.getOrDefault(key, new ArrayList<>());
-          val.add(s);
-          answer.put(key, val);
+//            List<String> val = answer.getOrDefault(key, new ArrayList<>());
+//            val.add(s);
+//            answer.put(key, val);
         }
         return new ArrayList(answer.values());
     }
@@ -35,5 +35,6 @@ public class Group_anagrams {
           }
           System.out.println();
       }
+
     }
 }
