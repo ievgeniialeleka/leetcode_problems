@@ -35,6 +35,5 @@ public class Group_anagrams {
           }
           System.out.println();
       }
-
     }
 }
