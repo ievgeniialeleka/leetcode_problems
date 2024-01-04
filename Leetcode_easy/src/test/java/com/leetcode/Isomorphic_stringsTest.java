@@ -50,7 +50,7 @@ class Isomorphic_stringsTest {
 
     @ParameterizedTest
     @CsvFileSource(resources = "/isomorphic_strings_positive.csv", numLinesToSkip = 1)
-    void testIsIsomorpic2Positive(String first, String second) {
+    void testIsIsomorphic2Positive(String first, String second) {
         assertTrue(Isomorphic_strings.isIsomorphic2(first, second));
     }
 
