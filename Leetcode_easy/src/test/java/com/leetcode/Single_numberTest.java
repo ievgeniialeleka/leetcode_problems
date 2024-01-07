@@ -13,9 +13,11 @@ class Single_numberTest {
         int actual = Single_number.singleNumber(nums);
         int actual2 = Single_number.singleNumberList(nums);
         int actual3 = Single_number.singleNumberHashTable(nums);
+        int actual4 = Single_number.singleNumberStream(nums);
         assertEquals(expected, actual);
         assertEquals(expected, actual2);
         assertEquals(expected, actual3);
+        assertEquals(expected, actual4);
     }
 
     @Test
@@ -25,9 +27,11 @@ class Single_numberTest {
         int actual = Single_number.singleNumber(nums);
         int actual2 = Single_number.singleNumberList(nums);
         int actual3 = Single_number.singleNumberHashTable(nums);
+        int actual4 = Single_number.singleNumberStream(nums);
         assertEquals(expected, actual);
         assertEquals(expected, actual2);
         assertEquals(expected, actual3);
+        assertEquals(expected, actual4);
     }
 
 

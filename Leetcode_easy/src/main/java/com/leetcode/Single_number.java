@@ -3,6 +3,7 @@ package com.leetcode;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class Single_number {
 
@@ -49,5 +50,12 @@ public class Single_number {
             }
         }
         return 0;
+    }
+
+    /** Time complexity O(n) - linear runtime.
+     * Space complexity  - O(1) - constant
+     */
+    public static int singleNumberStream(int[] nums) {
+        return IntStream.of(nums).reduce((x,y) -> x ^ y).getAsInt();
     }
 }
