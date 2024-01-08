@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class Isomorphic_stringsTest {
+class IsomorphicStringsTest {
 
 
     @ParameterizedTest
@@ -25,20 +25,20 @@ class Isomorphic_stringsTest {
     })
     void testTransformToNumbers(String number, String key) {
         String expected = number + " ";
-        String actual = Isomorphic_strings.transformToNumbers(key);
+        String actual = IsomorphicStrings.transformToNumbers(key);
         assertEquals(expected, actual);
     }
 
     @ParameterizedTest
     @CsvFileSource(resources = "/isomorphic_strings_positive.csv", numLinesToSkip = 1)
     void testIsIsomorpicPositive(String first, String second) {
-        assertTrue(Isomorphic_strings.isIsomorphic(first, second));
+        assertTrue(IsomorphicStrings.isIsomorphic(first, second));
     }
 
     @ParameterizedTest
     @MethodSource("provideValuesForNegativeCases")
     void testIsIsomorphicNegative(String first, String second) {
-        assertFalse(Isomorphic_strings.isIsomorphic(first, second));
+        assertFalse(IsomorphicStrings.isIsomorphic(first, second));
     }
 
     private static Stream<Arguments> provideValuesForNegativeCases() {
@@ -52,13 +52,13 @@ class Isomorphic_stringsTest {
     @ParameterizedTest
     @CsvFileSource(resources = "/isomorphic_strings_positive.csv", numLinesToSkip = 1)
     void testIsIsomorphic2Positive(String first, String second) {
-        assertTrue(Isomorphic_strings.isIsomorphic2(first, second));
+        assertTrue(IsomorphicStrings.isIsomorphic2(first, second));
     }
 
     @ParameterizedTest
     @MethodSource
     void testIsIsomorphic2Negative(String first, String second) {
-        assertFalse(Isomorphic_strings.isIsomorphic2(first, second));
+        assertFalse(IsomorphicStrings.isIsomorphic2(first, second));
     }
 
     private static Stream<Arguments> testIsIsomorphic2Negative() {
@@ -72,7 +72,7 @@ class Isomorphic_stringsTest {
     @Test
     void testNullPointerException() {
         assertThrows(NullPointerException.class, () -> {
-            Isomorphic_strings.isIsomorphic(null, "");
+            IsomorphicStrings.isIsomorphic(null, "");
         });
     }
 }

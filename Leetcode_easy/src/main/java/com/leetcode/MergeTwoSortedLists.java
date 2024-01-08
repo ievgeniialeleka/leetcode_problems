@@ -1,9 +1,9 @@
 package com.leetcode;
 
-public class Merge_two_sorted_lists {
+public class MergeTwoSortedLists {
 
-    /** Time complexity: O(m + n).
-     * Space complexity: O(1). **/
+    /* Time complexity: O(m + n).
+      Space complexity: O(1). */
 
     public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode prehead = new ListNode(-1);
@@ -24,8 +24,8 @@ public class Merge_two_sorted_lists {
         return prehead.next;
     }
 
-    /** Time complexity: O(m + n).
-     * Space complexity: O(m + n). **/
+    /* Time complexity: O(m + n).
+     Space complexity: O(m + n). */
     public static ListNode mergeTwoListsRecursion(ListNode list1, ListNode list2) {
        if(list1 == null) {
            return list2;

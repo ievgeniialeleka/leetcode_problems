@@ -3,11 +3,11 @@ package com.leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Ransom_note {
+public class RansomNote {
 
-    /** Time complexity O(m) where m is the length of magazine string.
+    /* Time complexity O(m) where m is the length of magazine string.
      Space complexity is O(k) where k is the number of characters in magazine string,
-     but because the alphabet has only 26 characters it means we can use space complexity of O(1) **/
+     but because the alphabet has only 26 characters it means we can use space complexity of O(1) */
     public static boolean canConstruct(String ransomNote, String magazine) {
        if(ransomNote.length() > magazine.length()) return false;
 

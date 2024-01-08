@@ -3,7 +3,11 @@ package com.leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Summary_Ranges {
+public class SummaryRanges {
+
+    /* Time complexity - O(n)
+    Space complexity - O(1)
+     */
     public static List<String> summaryRanges(int[] nums) {
      List<String> ranges = new ArrayList<>();
 

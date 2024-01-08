@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class Merge_two_sorted_listsTest {
+class MergeTwoSortedListsTest {
 
     private static ListNode list1;
     private static ListNode list2;
@@ -21,7 +21,7 @@ class Merge_two_sorted_listsTest {
 
     @Test
     void mergeTwoLists() {
-        ListNode actual = Merge_two_sorted_lists.mergeTwoLists(list1, list2);
+        ListNode actual = MergeTwoSortedLists.mergeTwoLists(list1, list2);
         assertListValues(actual, 1, 1, 2, 3, 4, 4);
     }
 
@@ -36,7 +36,7 @@ class Merge_two_sorted_listsTest {
 
     @Test
     void mergeTwoListsRecursion() {
-        ListNode actual = Merge_two_sorted_lists.mergeTwoListsRecursion(list1, list2);
+        ListNode actual = MergeTwoSortedLists.mergeTwoListsRecursion(list1, list2);
         assertListValues(actual, 1, 1, 2, 3, 4, 4);
     }
 

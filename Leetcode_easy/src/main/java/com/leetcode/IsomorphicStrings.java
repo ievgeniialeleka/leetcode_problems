@@ -3,14 +3,14 @@ package com.leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Isomorphic_strings {
+public class IsomorphicStrings {
 
-    /** Time complexity O(N). Space complexity O(1). **/
-    public static boolean isIsomorphic(String s, String t) {
+      /* Time complexity O(N). Space complexity O(1). */
+      public static boolean isIsomorphic(final String s, final String t) {
         return transformToNumbers(s).equals(transformToNumbers(t));
     }
 
-    static String transformToNumbers(String str) {
+      static String transformToNumbers(final String str) {
         Map<Character, Integer> map = new HashMap<>();
         StringBuilder sb = new StringBuilder();
 
@@ -25,7 +25,7 @@ public class Isomorphic_strings {
         return sb.toString();
     }
 
-    /** Time complexity O(N). Space complexity O(N). **/
+    /* Time complexity O(N). Space complexity O(N). */
     public static boolean isIsomorphic2(String s, String t) {
 
         int[] sarr = new int[128];

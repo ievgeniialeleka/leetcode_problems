@@ -7,12 +7,12 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-class Ransom_noteTest {
+class RansomNoteTest {
 
-    private static Ransom_note ransomNote;
+    private static RansomNote ransomNote;
     @BeforeAll
     static void init() {
-        ransomNote = new Ransom_note();
+        ransomNote = new RansomNote();
     }
 
     @ParameterizedTest

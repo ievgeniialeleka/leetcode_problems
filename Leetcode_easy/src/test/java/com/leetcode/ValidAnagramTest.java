@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-class Valid_AnagramTest {
+class ValidAnagramTest {
 
     @ParameterizedTest
     @CsvSource({
@@ -15,10 +15,10 @@ class Valid_AnagramTest {
             "sing, gnis"
     })
     void testIsAnagramPositive(String s, String t) {
-        assertTrue(Valid_Anagram.isAnagram(s,t));
-        assertTrue(Valid_Anagram.isAnagramFrequencyCounter(s,t));
-        assertTrue(Valid_Anagram.isAnagramString(s,t));
-        assertTrue(Valid_Anagram.isAnagramHashMap(s,t));
+        assertTrue(ValidAnagram.isAnagram(s,t));
+        assertTrue(ValidAnagram.isAnagramFrequencyCounter(s,t));
+        assertTrue(ValidAnagram.isAnagramString(s,t));
+        assertTrue(ValidAnagram.isAnagramHashMap(s,t));
 
     }
 
@@ -29,10 +29,10 @@ class Valid_AnagramTest {
             "sing, gniss"
     })
     void testIsAnagramNegative(String s, String t) {
-        assertFalse(Valid_Anagram.isAnagram(s,t));
-        assertFalse(Valid_Anagram.isAnagramFrequencyCounter(s,t));
-        assertFalse(Valid_Anagram.isAnagramString(s,t));
-        assertFalse(Valid_Anagram.isAnagramHashMap(s,t));
+        assertFalse(ValidAnagram.isAnagram(s,t));
+        assertFalse(ValidAnagram.isAnagramFrequencyCounter(s,t));
+        assertFalse(ValidAnagram.isAnagramString(s,t));
+        assertFalse(ValidAnagram.isAnagramHashMap(s,t));
 
     }
 

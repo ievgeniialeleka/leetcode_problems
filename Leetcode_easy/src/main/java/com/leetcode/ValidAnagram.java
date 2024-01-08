@@ -4,12 +4,10 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Valid_Anagram {
+public class ValidAnagram {
 
-    /**
-     * Time complexity - O(n log n)
-     * Space complexity - O(1)
-     */
+    /* Time complexity - O(n log n)
+       Space complexity - O(1) */
     public static boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) return false;
 
@@ -20,10 +18,8 @@ public class Valid_Anagram {
         return Arrays.equals(str1, str2);
     }
 
-    /**
-     * Time complexity - O(n). If given Strings contain any unicode characters, we can use HashTable instead of int array.
-     * Space complexity - O(1)
-     */
+    /* Time complexity - O(n). If given Strings contain any unicode characters, we can use HashTable instead of int array.
+       Space complexity - O(1) */
     public static boolean isAnagramFrequencyCounter(String s, String t) {
         if (s.length() != t.length()) return false;
 
@@ -40,10 +36,8 @@ public class Valid_Anagram {
         return true;
     }
 
-    /**
-     * Time complexity - O(n^2) - for loop + contains in String
-     * Space complexity - O(n) because we create a new string each time when substringing t
-     */
+    /* Time complexity - O(n^2) - for loop + contains in String
+       Space complexity - O(n) because we create a new string each time when substringing t */
     public static boolean isAnagramString(String s, String t) {
         if (s.length() != t.length()) return false;
 
@@ -58,10 +52,8 @@ public class Valid_Anagram {
         return true;
     }
 
-    /**
-     * Time complexity - O(n)
-     * Space complexity - O(n)
-     */
+    /* Time complexity - O(n)
+       Space complexity - O(n) */
     public static boolean isAnagramHashMap(String s, String t) {
         if (s.length() != t.length()) return false;
 

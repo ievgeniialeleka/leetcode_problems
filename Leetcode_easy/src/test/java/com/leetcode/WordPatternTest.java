@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-class Word_PatternTest {
+class WordPatternTest {
 
     @ParameterizedTest
     @CsvSource({
@@ -16,8 +16,8 @@ class Word_PatternTest {
             "abab, cat dog cat dog"
     })
     void testWordPatternPositive(String pattern, String s) {
-        assertTrue(Word_Pattern.wordPattern(pattern, s));
-        assertTrue(Word_Pattern.wordPattern2(pattern, s));
+        assertTrue(WordPattern.wordPattern(pattern, s));
+        assertTrue(WordPattern.wordPattern2(pattern, s));
     }
 
     @ParameterizedTest
@@ -28,7 +28,7 @@ class Word_PatternTest {
             "ababa, cat dog cat dog"
     })
     void testWordPatternNegative(String pattern, String s) {
-        assertFalse(Word_Pattern.wordPattern(pattern, s));
-        assertFalse(Word_Pattern.wordPattern2(pattern, s));
+        assertFalse(WordPattern.wordPattern(pattern, s));
+        assertFalse(WordPattern.wordPattern2(pattern, s));
     }
 }

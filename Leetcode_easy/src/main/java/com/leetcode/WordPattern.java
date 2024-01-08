@@ -3,8 +3,10 @@ package com.leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Word_Pattern {
+public class WordPattern {
 
+    /* Time complexity - O(n + m)
+       Space complexity - O(w) or O(1) because maximum 26 characters possible */
     public static boolean wordPattern(String pattern, String s) {
         String[] words = s.split(" ");
         if(pattern.length() != words.length) return false;
@@ -33,6 +35,8 @@ public class Word_Pattern {
         return true;
     }
 
+    /* Time complexity - O(n + m)
+       Space complexity - O(w) or O(1) because maximum 26 characters possible */
     public static boolean wordPattern2(String pattern, String s) {
         String[] words = s.split(" ");
         if(pattern.length() != words.length) return false;

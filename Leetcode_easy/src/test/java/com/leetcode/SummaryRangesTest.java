@@ -11,7 +11,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasSize;
 
 
-class Summary_RangesTest {
+class SummaryRangesTest {
 
    @Test
     void testSummaryRanges() {
@@ -21,11 +21,11 @@ class Summary_RangesTest {
         List<String> expected1 = Arrays.asList("0->2", "4->5","7");
         List<String> expected2 = Arrays.asList("0", "2->4", "6", "8->9");
 
-        List<String> actual1 = Summary_Ranges.summaryRanges(nums1);
+        List<String> actual1 = SummaryRanges.summaryRanges(nums1);
         assertThat(actual1, hasSize(3));
         assertThat(actual1, is(expected1));
 
-        List<String> actual2 = Summary_Ranges.summaryRanges(nums2);
+        List<String> actual2 = SummaryRanges.summaryRanges(nums2);
         assertThat(actual2, hasSize(4));
         assertThat(actual2, is(expected2));
     }
@@ -33,7 +33,7 @@ class Summary_RangesTest {
     @Test
     void testSummaryRangesWithEmptyArray() {
         int[] nums = {};
-        List<String> actual3 = Summary_Ranges.summaryRanges(nums);
+        List<String> actual3 = SummaryRanges.summaryRanges(nums);
         assertThat(actual3, IsEmptyCollection.empty());
     }
 }
