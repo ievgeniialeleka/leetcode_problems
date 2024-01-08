@@ -16,6 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class Isomorphic_stringsTest {
 
+
     @ParameterizedTest
     @CsvSource({
             "0 1 1 3 , food",
