@@ -12,7 +12,7 @@ public class MergeAlternately {
         StringBuilder sb = new StringBuilder();
         int counter = 0;
 
-        while (counter < word1.length() && counter < word2.length()) {
+        while (counter < m && counter < n) {
             sb.append(word1.charAt(counter));
             sb.append(word2.charAt(counter));
             counter++;
