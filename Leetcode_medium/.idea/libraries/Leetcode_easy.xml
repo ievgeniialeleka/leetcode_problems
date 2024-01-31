@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Leetcode_easy">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../Leetcode_easy" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../Leetcode_easy/src/main/java" />
+    </SOURCES>
+  </library>
+</component>
