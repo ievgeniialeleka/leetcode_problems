@@ -26,21 +26,4 @@ public class ListNode {
     public ListNode getNext() {
         return next;
     }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == this) {
-            return true;
-        }
-        if (obj != null && obj instanceof ListNode) {
-            ListNode other = (ListNode) obj;
-            return this.getVal() == (other.getVal()) &&
-                    this.getNext().equals(other.getNext());
-        }
-        return false;
-    }
-    @Override
-    public int hashCode() {
-        return Objects.hash(val, next);
-    }
 }
