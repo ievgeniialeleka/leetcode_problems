@@ -15,6 +15,7 @@ class EditDistanceTest {
     void testMinDistance(String word1, String word2, int result) {
         assertEquals(result, EditDistance.minDistance(word1, word2));
         assertEquals(result, EditDistance.minDistDpTd(word1, word2));
+        assertEquals(result, EditDistance.minDistDpBUp(word1, word2));
     }
 
     private static Stream<Arguments> generateInput() {

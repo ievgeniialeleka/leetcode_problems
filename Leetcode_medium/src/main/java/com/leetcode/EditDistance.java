@@ -47,7 +47,7 @@ public class EditDistance {
             return memo[word1Index][word2Index];
         }
 
-        int minEditDistance = 0;
+        int minEditDistance;
         if (word1.charAt(word1Index - 1) == word2.charAt(word2Index - 1)) {
             minEditDistance = minDistDpTdRecur(word1, word2, word1Index - 1, word2Index - 1);
         } else {
@@ -58,5 +58,45 @@ public class EditDistance {
         }
         memo[word1Index][word2Index] = minEditDistance;
         return minEditDistance;
+    }
+
+    /* Time complexity - O(M * N) - nested loop
+       Space complexity - O(M * N) - space for additional 2-dimensional array */
+    public static int minDistDpBUp(String word1, String word2) {
+
+        int word1length = word1.length();
+        int word2length = word2.length();
+
+        if(word1length == 0) {
+            return word2length;
+        }
+
+        if(word2length == 0) {
+            return word1length;
+        }
+        int[][] dp = new int[word1length + 1][word2length + 1];
+
+
+        for(int i = 1; i <= word1length; i++) {
+            dp[i][0] = i;
+        }
+
+        for(int i = 1; i <= word2length; i++) {
+            dp[0][i] = i;
+        }
+
+        for(int word1Index = 1; word1Index <= word1.length(); word1Index++) {
+            for(int word2Index = 1; word2Index <= word2.length(); word2Index++) {
+                if(word1.charAt(word1Index - 1) == word2.charAt(word2Index - 1)) {
+                    dp[word1Index][word2Index] = dp[word1Index - 1][word2Index - 1];
+                } else {
+                    int replacement = dp[word1Index - 1][word2Index - 1];
+                    int deletion = dp[word1Index - 1][word2Index];
+                    int insertion = dp[word1Index][word2Index -1];
+                    dp[word1Index][word2Index] = Math.min(replacement, Math.min(deletion, insertion)) + 1;
+                }
+            }
+        }
+        return dp[word1length][word2length];
     }
 }
