@@ -13,7 +13,8 @@ class SortArrayTest {
     @ParameterizedTest
     @MethodSource("generateInput")
     void testSortArray(int[] input, int[] result) {
-        assertArrayEquals(result, SortArray.sortArray(input));
+        assertArrayEquals(result, SortArray.sortArrayMergeSort(input));
+        assertArrayEquals(result, SortArray.sortArrayCountingSort(input));
     }
 
     private static Stream<Arguments> generateInput() {
