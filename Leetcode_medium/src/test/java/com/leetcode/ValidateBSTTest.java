@@ -17,6 +17,8 @@ class ValidateBSTTest {
 
         assertTrue(ValidateBST.validateBST(t1));
         assertTrue(ValidateBST.validateBSTIterative(t1));
+        assertTrue(ValidateBST.validateBSTInorderRecursive(t1));
+        assertTrue(ValidateBST.validateBSTInorderIterative(t1));
     }
 
     @Test
@@ -29,5 +31,7 @@ class ValidateBSTTest {
 
         assertFalse(ValidateBST.validateBST(t1));
         assertFalse(ValidateBST.validateBSTIterative(t1));
+        assertFalse(ValidateBST.validateBSTInorderRecursive(t1));
+        assertFalse(ValidateBST.validateBSTInorderIterative(t1));
     }
 }

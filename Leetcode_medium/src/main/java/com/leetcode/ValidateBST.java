@@ -1,5 +1,6 @@
 package com.leetcode;
 
+import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.LinkedList;
 
@@ -55,6 +56,53 @@ public class ValidateBST {
                 update(root.left, low, val);
                 update(root.right, val, high);
             }
+        }
+        return true;
+    }
+
+    /* Time complexity - O(n) in the worst case when valid BST or invalid root is the right most
+       Space complexity - O(n) to keep stack */
+    static Integer prev;
+    public static boolean validateBSTInorderRecursive(TreeNode root) {
+        prev = null;
+        return inOrder(root);
+    }
+
+    private static boolean inOrder(TreeNode root) {
+        if(root == null) {
+            return true;
+        }
+
+        if(!inOrder(root.left)) {
+            return false;
+        }
+
+        if(prev != null && root.val <= prev) {
+            return false;
+        }
+
+        prev = root.val;
+        return inOrder(root.right);
+    }
+
+    /* Time complexity - O(n) in the worst case when valid BST or invalid root is the right most
+       Space complexity - O(n) to keep stack */
+    public static boolean validateBSTInorderIterative(TreeNode root) {
+        Integer prev = null;
+        Deque<TreeNode> stack = new ArrayDeque<>();
+
+        while(!stack.isEmpty() || root != null) {
+            while(root != null) {
+                stack.push(root);
+                root = root.left;
+            }
+            root = stack.pop();
+
+            if(prev != null && prev >= root.val) {
+                return false;
+            }
+            prev = root.val;
+            root = root.right;
         }
         return true;
     }
